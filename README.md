@@ -33,7 +33,7 @@ npm run test
 
 ## Author
 
-👤 **raohannismara**
+👤 **raihan.nismara**
 
 * Twitter: [@rayhan_nj](https://twitter.com/rayhan_nj)
 * Github: [@raihan71](https://github.com/raihan71)
@@ -41,6 +41,3 @@ npm run test
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
