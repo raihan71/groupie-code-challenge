@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Group</span>
+    <div class="mx-2">
+      <input type="text" class="form-control" [(ngModel)]="name" (keyup)="inputName($event)" placeholder="Name Group">
+    </div>
+  <div class="my-2 my-lg-0">
+      <a routerLink="/" class="btn btn-md btn-light">Back</a>
+      <button (click)="onSave()" class="btn btn-md btn-light">Save</button>
+  </div>
+</nav>
+
+<div class="mt-1 px-2">
+  <h2>People</h2>
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <select class="form-control" name="member" [(ngModel)]="member">
+                <option value="" disabled selected>--</option>
+                <option *ngFor="let user of users" [value]="user?.name">{{user?.name}}</option>
+            </select>
+        </div>
+        <div class="col-12 col-md-8">
+            <button (click)="addMembers()" class="btn btn-md btn-light">Add Person</button>
+        </div>
+    </div>
+  <hr>
+  <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of members">
+          <th scope="row">{{member}}</th>
+          <td>
+            <button (click)="deleteMember(member)" class="btn btn-md btn-light">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
