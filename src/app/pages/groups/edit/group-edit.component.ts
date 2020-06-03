@@ -35,7 +35,12 @@ export class GroupEditComponent implements OnInit {
       this.members = this.group.members;
     }
     this.subscription = this.userService.getUsers().subscribe(resp => {
-      this.users = resp;
+      if(resp){
+        this.users = resp 
+      }else{
+        const users = [{name:'Michael'},{name:'Michele'},{name:'Mike'}];
+        this.users.push(users);
+      }
     })
   }
 
