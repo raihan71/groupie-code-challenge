@@ -28,7 +28,12 @@ export class GroupAddComponent implements OnInit {
 
   ngOnInit() {
     this.usersrption = this.usersService.getUsers().subscribe(resp => {
-      this.users = resp
+      if(resp){
+        this.users = resp 
+      }else{
+        const users = [{name:'Michael'},{name:'Michele'},{name:'Mike'}];
+        this.users.push(users);
+      }
     });
 
     this.group = this.groupService.getGroups();
